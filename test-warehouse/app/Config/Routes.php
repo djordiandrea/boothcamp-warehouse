@@ -33,6 +33,7 @@ $routes->get('/', 'Login::index');
 $routes->get('/home', 'Home::index');
 $routes->get('/login', 'Login::index');
 $routes->post('/login/submitLogin', 'Login::submitLogin');
+$routes->get('/list-kendaraan', 'ListKendaraan::index');
 
 /*
  * --------------------------------------------------------------------

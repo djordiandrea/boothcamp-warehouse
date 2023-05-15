@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\LoginModel;
+
 class Login extends BaseController
 {
     public function index()
@@ -11,25 +13,13 @@ class Login extends BaseController
 
     public function submitLogin()
     {
-        //email & password -> 
-        // var data = {
-        //     email: email, //(key, value) = (key= "yg mau dikirim ke controller", value="yg didapat dari variable jsnya")
-        //     password: pw
-        // }
 
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-
-        // //ini nanti kita taro di model
-        $db = db_connect();
-        // $query = "SELECT * FROM mst_user WHERE mus_email = '" . $email . "' AND mus_password = '" . $password . "' ";
-        $query = "CALL getUserLogin('" . $email . "','" . $password . "');";
-        $execQuery = $db->query($query);
-        $db->close();
-        // //-------------------------------
-
-        $result = $execQuery->getResult();
+        //model
+        $loginModel = new LoginModel();
+        $result = $loginModel->getLoginData($email, $password);
 
         if (sizeof($result) > 0) {
             $data_login = [
