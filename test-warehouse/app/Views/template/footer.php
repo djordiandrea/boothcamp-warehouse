@@ -50,14 +50,12 @@
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#addKendaraan').click(function() {
-            $("#modal-default").modal("show");
-        });
-    });
-</script>
+<!-- global.js -->
+<script src="<?php echo base_url(); ?>assets/js/global.js"></script>
+<!-- list-kendaraan/index.js -->
+<?php if ($path == 'list-kendaraan') { ?>
+    <script src="<?php echo base_url(); ?>assets/js/list-kendaraan/index.js"></script>
+<?php } ?>
 
 </body>
 

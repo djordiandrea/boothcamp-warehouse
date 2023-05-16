@@ -8,7 +8,7 @@
 
                     <div class="card-tools">
                         <div class="input-group-append">
-                            <button class="btn btn-info form-control float-right" id="addKendaraan">Add</button>
+                            <button class="btn btn-info form-control float-right" type="button" id="addKendaraan">Add</button>
                         </div>
                     </div>
                 </div>
@@ -17,32 +17,18 @@
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>User</th>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>Reason</th>
+                                <th>Name</th>
+                                <th>Code</th>
+                                <th>Brand</th>
+                                <th>Model</th>
+                                <th>Number</th>
+                                <th>Long Run</th>
+                                <th>Buying Date</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbVehicle">
 
-                            <!-- <tr>
-                                <td>175</td>
-                                <td>Mike Doe</td>
-                                <td>11-7-2014</td>
-                                <td><span class="tag tag-danger">Denied</span></td>
-                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                            </tr> -->
 
-                            <?php for ($i = 0; $i < sizeof($list_kendaraan); $i++) { ?>
-                                <tr>
-                                    <td><?php echo $list_kendaraan[$i]->mlv_vehicleName; ?></td>
-                                    <td>Mike Doe</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-danger">Denied</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                </tr>
-                            <?php } ?>
                         </tbody>
                     </table>
 

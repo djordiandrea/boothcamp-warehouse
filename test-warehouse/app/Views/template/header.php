@@ -255,6 +255,7 @@
             </div>
             <!-- /.content-header -->
 
+            <!-- modal -->
             <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -264,15 +265,16 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <p>One fine body&hellip;</p>
+                        <div class="modal-body" id="modalBody">
+                            <?php echo view('list-kendaraan/add/add-kendaraan'); ?>
                         </div>
                         <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary" id="btn-save">Save</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            <!-- / modal -->

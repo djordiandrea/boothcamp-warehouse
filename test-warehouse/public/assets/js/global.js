@@ -21,6 +21,8 @@ var global = {
     },
     ajaxGet:function(url, data, next){
         $.ajax({
+            type: "GET",
+            dataType : "json",
             url: base_url+url,
             data: data,
             success: function(result) {
