@@ -28,6 +28,8 @@
             <label for="exampleInputEmail1">Vehicle Buying Date</label>
             <input type="date" class="form-control" id="vehicleBuyingDate">
         </div>
+        <input type="hidden" class="form-control" id="action">
+        <input type="hidden" class="form-control" id="vehicleId">
     </div>
     <!-- /.card-body -->
 </form>

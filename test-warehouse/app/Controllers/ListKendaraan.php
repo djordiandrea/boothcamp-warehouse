@@ -42,6 +42,26 @@ class ListKendaraan extends BaseController
         return json_encode($result);
     }
 
+    public function readKendaraanById()
+    {
+        $id = $this->request->getGet('id');
+
+        $dataModel = new DataModel();
+        $result = $dataModel->getAllVehicleById($id);
+
+        return json_encode($result);
+    }
+
+    public function deleteKendaraan()
+    {
+        $id = $this->request->getGet('id');
+
+        $dataModel = new DataModel();
+        $result = $dataModel->getAllVehicleById($id);
+
+        return json_encode($result);
+    }
+
     public function addKendaraan()
     {
         $vName = $this->request->getPost('vName');
@@ -84,5 +104,15 @@ class ListKendaraan extends BaseController
         }
 
         return json_encode($data);
+    }
+
+    public function getAllUser()
+    {
+        $username = $this->request->getPost("username");
+
+        $dataModel = new DataModel();
+        $result = $dataModel->getAllUser($username);
+
+        return json_encode($result, true);
     }
 }

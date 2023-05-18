@@ -48,5 +48,18 @@ var global = {
             }
         });
     },
+    ajaxGet2:function(url, next){
+        $.ajax({
+            type: "GET",
+            dataType : "json",
+            url: url,
+            success: function(result) {
+                next(result);
+            },
+            error: function(error) {
+                next(error);
+            }
+        });
+    },
 
 }

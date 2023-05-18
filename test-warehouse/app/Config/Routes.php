@@ -35,7 +35,10 @@ $routes->get('/login', 'Login::index');
 $routes->post('/login/submitLogin', 'Login::submitLogin');
 $routes->get('/list-kendaraan', 'ListKendaraan::index');
 $routes->get('/read-kendaraan', 'ListKendaraan::readKendaraan');
+$routes->get('/read-kendaraan/update', 'ListKendaraan::readKendaraanById');
+$routes->get('/read-kendaraan/delete', 'ListKendaraan::deleteKendaraan');
 $routes->post('/list-kendaraan/addKendaraan', 'ListKendaraan::addKendaraan');
+$routes->get('/list-user', 'ListKendaraan::getAllUser');
 
 /*
  * --------------------------------------------------------------------
